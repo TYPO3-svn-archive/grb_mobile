@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>News-Slide</title>
+
+<link rel="stylesheet" type="text/css" href="/typo3conf/ext/grb_mobile/Resources/Public/CSS/grb_mobile-moreslider.css" media="all">
+
+</head>
+
+<body>
+
+<p class="bodytext">
+	<div class="grb_mobile-previewtext">
+    	Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. 
+	</div>
+	<script type="text/javascript">
+		jQuery(document).ready(function($){
+			$('.grb_mobile-morelink').click(function(){
+				$('.grb_mobile-moretext').show();
+				$('.grb_mobile-lesslink').show();
+				$('.grb_mobile-morelink').hide();
+			});
+			$('.grb_mobile-lesslink').click(function(){
+				$('.grb_mobile-lesslink').hide();
+				$('.grb_mobile-moretext').hide();
+				$('.grb_mobile-morelink').show();
+			});	
+		});		
+	</script>	
+	<div class="grb_mobile-morelink">
+		<a href="#">Mehr Text</a>
+	</div>
+	<div class="grb_mobile-moretext">
+	    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+	</div>
+	<div class="grb_mobile-lesslink">
+		<a href="#">Weniger Text</a>
+	</div>	
+</p>
+
+</body>
+</html>

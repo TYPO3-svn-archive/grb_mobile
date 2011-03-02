@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'grb_mobile'</description>
+	</meta>
+    <data type="array">
+        <languageKey index="default" type="array">
+            <label index="tt_content.tx_grbmobile_hide_on_mobile">Hide on mobile website</label>
+			<label index="tt_content.tx_grbmobile_show_only_on_mobile">Show only on mobile website</label>
+			<label index="tt_content.tx_grbmobile_show_on_mobile">Show on mobile website</label>
+        </languageKey>
+		<languageKey index="de" type="array">
+			<label index="tt_content.tx_grbmobile_hide_on_mobile">Auf mobiler Website ausblenden</label>
+			<label index="tt_content.tx_grbmobile_show_only_on_mobile">Nur auf mobiler Website anzeigen</label>
+			<label index="tt_content.tx_grbmobile_show_on_mobile">Auf mobiler Website anzeigen</label>
+		</languageKey>
+    </data>
+</T3locallang>

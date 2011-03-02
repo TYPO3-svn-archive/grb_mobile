@@ -1,0 +1,91 @@
+############################################################################################################################
+# Default
+############################################################################################################################
+
+config{
+	baseURL = {$grb_mobile.config.noneMobileUrl}  
+
+	# config language
+	linkVars = L
+	
+	# debug
+	linkVars = grb_mobile
+	
+	sys_language_uid = 0
+}
+
+[globalVar = GP:L = 1]
+	config.sys_language_uid = 1
+[global]
+
+page{
+	includeCSS.grb_mobile03 = EXT:grb_mobile/Resources/Public/CSS/grb_mobile-moreslider-nonemobile.css
+}
+	
+# grb_mobile - templavoila - record
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:grb_mobile/Configuration/TypoScript/Extensions/templavoila/grb_mobile.records.txt">
+
+# grb_mobile - templavoila - content.slide
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:grb_mobile/Configuration/TypoScript/Extensions/templavoila/grb_mobile.records.slide.txt">
+
+############################################################################################################################
+# Mobile
+############################################################################################################################
+
+# lib.grb_mobile.morelink
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:grb_mobile/Configuration/TypoScript/lib/grb_mobile.morelink/setup.txt">
+
+# lib.grb_mobile.switchnav
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:grb_mobile/Configuration/TypoScript/lib/grb_mobile.switchnav/setup.txt">
+
+[globalString = IENV:HTTP_HOST=xah3thah.artcom.de]
+	# TsClenaer
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:grb_mobile/Configuration/TypoScript/TsCleaner/setup.txt">
+
+	# config
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:grb_mobile/Configuration/TypoScript/config/setup.txt">
+	
+	# page
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:grb_mobile/Configuration/TypoScript/page/setup.txt">
+	
+	# templavoila - child
+	plugin.tx_templavoila_pi1.childTemplate = grb_mobile
+	
+	# grb_mobile - templavoila - record
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:grb_mobile/Configuration/TypoScript/Extensions/templavoila/grb_mobile.records.mobile.txt">	
+	
+	# grb_mobile - templavoila - record.slide
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:grb_mobile/Configuration/TypoScript/Extensions/templavoila/grb_mobile.records.mobile.slide.txt">	
+	
+	# tt_news
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:grb_mobile/Configuration/TypoScript/Extensions/tt_news/setup.txt">	
+		
+	# tt_news
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:grb_mobile/Configuration/TypoScript/Extensions/html5videoplayer/setup.txt">			
+		
+	# lib - mobileheader
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:grb_mobile/Configuration/TypoScript/lib/mobileheader/setup.txt">	
+	
+	# lib - grb_mobile.logo
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:grb_mobile/Configuration/TypoScript/lib/grb_mobile.logo/setup.txt">	
+		
+	# lib - grb_mobile.footercontent
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:grb_mobile/Configuration/TypoScript/lib/grb_mobile.footercontent/setup.txt">
+	
+	# lib - grb_mobile.footernav
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:grb_mobile/Configuration/TypoScript/lib/grb_mobile.footernav/setup.txt">
+	
+	# lib - grb_mobile.langnav
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:grb_mobile/Configuration/TypoScript/lib/grb_mobile.langnav/setup.txt">
+	
+	# lib - nav
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:grb_mobile/Configuration/TypoScript/lib/grb_mobile.nav/setup.txt">
+		
+[END]
+
+[userFunc = user_grbmobile(isMobileDevice)]]
+page{
+	includeJS.grb_mobile02 = EXT:grb_mobile/Resources/Public/JavaScripts/jquery.cookie/jquery.cookie-1.0.js	
+	includeJS.grb_mobile03 = EXT:grb_mobile/Resources/Public/JavaScripts/grb_mobile-showdialogJs.js
+}
+[END]

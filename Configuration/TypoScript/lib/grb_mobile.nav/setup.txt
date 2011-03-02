@@ -1,0 +1,38 @@
+lib.grb_mobile.nav = COA
+lib.grb_mobile.nav.10 = COA
+lib.grb_mobile.nav.10 {
+	wrap = <ul>|</ul>
+	30 = HMENU
+	30 {
+		special = directory
+		special.value = 3
+		excludeUidList = 2
+		wrap = |
+		1 = TMENU
+		1 {
+			expAll = 0
+			noBlur = 1
+			wrap = |
+			NO = 1
+			NO.ATagTitle.field = abstract // description // subtitle
+			NO.wrapItemAndSub = <li>|</li>
+			NO.linkWrap = |
+			# NO.ATagParams = data-transition="pop"
+			CUR < .NO
+			CUR = 1
+			CUR.wrapItemAndSub = <li class="active"><strong>|</strong></li>
+			CUR.doNotLinkIt = 1
+			CUR.stdWrap.htmlSpecialChars = 1
+			ACT = 1
+			ACT < .CUR
+			ACT.wrapItemAndSub = <li class="active2"><strong>|</strong></li>
+			ACT.doNotLinkIt = 0
+			IFSUB = 1
+			IFSUB < .NO
+			IFSUB.linkWrap = |
+		}
+	}
+}
+
+tt_content.20.parseFunc.makelinks = 1
+tt_content.20.parseFunc.makelinks.http.ATagParams = data-transition="pop"

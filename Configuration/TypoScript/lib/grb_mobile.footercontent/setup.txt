@@ -1,0 +1,9 @@
+lib.grb_mobile.footercontent = CONTENT
+lib.grb_mobile.footercontent {
+    table = tt_content
+    select {
+        pidInList = 102
+        orderBy = sorting
+#        where = colPos=2
+    }
+}

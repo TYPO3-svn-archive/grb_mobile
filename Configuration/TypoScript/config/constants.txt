@@ -1,0 +1,4 @@
+grb_mobile.config {
+	mobileUrl		=http://xah3thah.artcom.de/
+	noneMobileUrl	=http://aehieg5s.artcom.de/
+}

@@ -1,0 +1,38 @@
+lib.grb_mobile.selectnav = HMENU
+lib.grb_mobile.selectnav{
+  special = directory
+  special.value = 56
+  wrap = <form action=""><p><select onchange="window.location=this.options[this.selectedIndex].value"><option value="">Seitenauswahl</option>|</select></p></form>
+ 
+  1 = TMENU
+  1 {
+    expAll = 1
+    NO {
+      doNotLinkIt = 1 
+      stdWrap.cObject = COA
+      stdWrap.cObject {
+        10 = TEXT
+        10 {
+          wrap = <option value="|">
+          typolink {
+            parameter.field = uid
+            returnLast = url
+          }
+        }
+        20 = TEXT
+        20 {
+           field = subtitle//title
+           wrap =  |</option>
+        }
+      }
+    }
+  }
+  2 < .1
+  2.NO.stdWrap.cObject.20.wrap = --|</option>
+  3 < .1
+  3.NO.stdWrap.cObject.20.wrap = ----|</option>
+  4 < .1
+  4.NO.stdWrap.cObject.20.wrap = ------|</option>
+  5 < .1
+  5.NO.stdWrap.cObject.20.wrap = --------|</option>
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for the grb_mobile extension in the FRONTEND</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="link_label_switch_tomobilesite">Use mobile theme</label>
+			<label index="link_label_switch_tononemobilesite">Use normal theme</label>
+			<label index="grb_mobile-showdialog_title">Theme</label>
+			<label index="grb_mobile-showdialog_text">There is a optimised theme for mobile devices</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="link_label_switch_tomobilesite">Mobile Website darstellen</label>
+			<label index="link_label_switch_tononemobilesite">Normale Website darstellen</label>
+			<label index="grb_mobile-showdialog_title">Darstellung</label>
+			<label index="grb_mobile-showdialog_text">Möchten Sie die Website für mobile Geräte optimiert anzeigen lassen?</label>
+		</languageKey>				
+	</data>
+</T3locallang>

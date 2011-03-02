@@ -1,0 +1,5 @@
+plugin.tt_news {
+  # exclude news from display in a plugin, if they've been displayed already by another plugin on the same page.
+  excludeAlreadyDisplayedNews = 0
+  limit = 
+}

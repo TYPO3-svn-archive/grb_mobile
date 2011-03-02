@@ -1,0 +1,5 @@
+styles.content{
+	imgtext.maxWInText = 0
+	imgtext.linkWrap.width = 250
+	imgtext.maxW = 290
+}

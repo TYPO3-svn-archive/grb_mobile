@@ -1,0 +1,5 @@
+# cat=basic//10; type=string; label=domain.ch
+noneMobileDomain = domain.ch
+
+# cat=basic//10; type=string; label=mobile.domain.ch
+mobileDomain = mobile.domain.ch

@@ -1,0 +1,39 @@
+lib.grb_mobile.langnav = HMENU
+lib.grb_mobile.langnav{
+	special = language
+	# Reihenfolge und Auswahl der Sprachen im Menü
+	special.value = 0,1
+	special.normalWhenNoLanguage = 0
+	wrap =<ul id="language_switch">|</ul>
+	1 = TMENU
+	1 {
+		noBlur = 1
+		# Standard Sprachen
+		NO = 1
+		NO {
+			linkWrap =<li>|</li>
+			# Standard-Titel für den Link wäre Seitenttitel
+			# =&gt; anderer Text als Link-Text (Optionsschift)
+			stdWrap.override = DE || EN
+			# Standardmäßige Verlinkung des Menüs ausschalten
+			# Da diese sonstige GET-Parameter nicht enthält
+			doNotLinkIt = 1
+			# Nun wird der Link mit den aktuellen GET-Parametern neu aufgebaut
+			stdWrap.typolink.parameter.data = page:uid
+			stdWrap.typolink.additionalParams = &L=0 || &L=1
+			stdWrap.typolink.addQueryString = 1
+			stdWrap.typolink.addQueryString.exclude = L,id,cHash,no_cache
+			stdWrap.typolink.addQueryString.method = GET
+			stdWrap.typolink.useCacheHash = 1
+			stdWrap.typolink.no_cache = 0
+			stdWrap.typolink.ATagParams = data-transition="flip"
+		}
+		# Aktive Sprache
+		ACT <.NO
+		ACT.linkWrap =<li class="active">|</li>
+		# NO + Übersetzung nicht vorhanden
+		USERDEF1 <.NO
+		# ACT + Übersetzung nicht vorhanden
+		USERDEF2 < .ACT
+	}
+}

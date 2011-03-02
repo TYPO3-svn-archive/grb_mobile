@@ -1,0 +1,8 @@
+grb_mobile.records = RECORDS
+grb_mobile.records{
+	source.current=1
+	tables = tt_content
+	dontCheckPid = 1
+	conf.tt_content.stdWrap.if.isFalse.field = tx_grbmobile_show_only_on_mobile 
+	wrap = <!--TYPO3SEARCH_begin--> | <!--TYPO3SEARCH_end-->
+}

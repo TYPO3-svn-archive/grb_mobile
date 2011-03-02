@@ -1,0 +1,16 @@
+############################################################################################################################
+# Mobile
+############################################################################################################################
+
+# config
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:grb_mobile/Configuration/TypoScript/config/constants.txt">
+	
+	
+[globalString = IENV:HTTP_HOST=xah3thah.artcom.de]
+	# style.content
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:grb_mobile/Configuration/TypoScript/styles.content/constants.txt">
+	
+	# tt_news
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:grb_mobile/Configuration/TypoScript/Extensions/tt_news/constants.txt">
+
+[END]

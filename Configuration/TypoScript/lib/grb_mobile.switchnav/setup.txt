@@ -1,0 +1,50 @@
+###########################################################################
+# Switch to Mobile-Website
+###########################################################################
+
+lib.grb_mobile.switchnav.toMobile = COA
+lib.grb_mobile.switchnav.toMobile {
+	10 = TEXT
+	10 {
+		value = Mobile Version
+		typolink.addQueryString = 1
+		typolink.addQueryString.method = GET
+		
+		# ajax-Version 
+		# typolink.parameter.dataWrap = {$grb_mobile.config.mobileUrl}#{getIndpEnv:REQUEST_URI}
+		
+		# noneAjax-Version 
+		typolink.parameter.dataWrap = {$grb_mobile.config.mobileUrl}..{getIndpEnv:REQUEST_URI}		
+		
+		wrap = <li>|&#160;<span class="textgrey">&#124;</span>&#160;</li>
+	}
+}
+
+[globalVar = GP:L = 1] 
+	lib.grb_mobile.switchnav.toMobile.10.value = Show Mobile Version
+[global]
+
+lib.footer.11 < lib.grb_mobile.switchnav.toMobile
+
+###########################################################################
+# Switch to NoneMobile-Website
+###########################################################################
+
+lib.grb_mobile.switchnav.noneMobile = COA
+lib.grb_mobile.switchnav.noneMobile {
+	10 = TEXT
+	10 {
+		value = Normale Version
+		typolink.ATagParams = rel="external"
+		typolink.addQueryString = 1
+		typolink.addQueryString.method = GET
+		typolink.parameter.dataWrap = {$grb_mobile.config.noneMobileUrl}..{getIndpEnv:REQUEST_URI}
+		wrap = <li>|&#160;<span class="textgrey">&#124;</span>&#160;</li>
+	}
+}
+
+[globalVar = GP:L = 1] 
+	lib.grb_mobile.switchnav.noneMobile.10.value = Show Mobile Version
+[global]
+
+lib.grb_mobile.footernav.11 < lib.grb_mobile.switchnav.noneMobile

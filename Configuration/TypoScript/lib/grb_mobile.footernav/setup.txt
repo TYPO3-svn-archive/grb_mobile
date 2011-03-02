@@ -1,0 +1,48 @@
+lib.grb_mobile.footernav = COA
+lib.grb_mobile.footernav{
+
+	10 = TEXT
+	10.value = <ul id="metanav">
+	
+	# 11 defined in (lib.grb_mobile.switchnav.noneMobile)	
+	
+	12 = HMENU
+	12 {
+		  special = list
+  		  special.value = 9,10,12
+  		  1 = TMENU
+		  1 {
+		    noBlur = 1
+		    NO = 1
+		    NO.ATagTitle.field = abstract // description // subtitle
+		    NO.linkWrap = |&#160;<span class="textgrey">&#124;</span>&#160;|*||&#160;<span class="textgrey">&#124;</span>&#160;|*||
+		    NO.allWrap = <li>|</li>
+		    NO.stdWrap.htmlSpecialChars = 1
+			NO.stdWrap.cObject = COA
+			NO.stdWrap.cObject {
+		        10 = TEXT
+		        10.field = subtitle // title
+			}     
+		    CUR < .NO
+		    CUR = 1
+		    CUR.allWrap = <li><span>|</span></li>
+		    CUR.doNotLinkIt = 1
+		  }
+	}
+	
+	13 = TEXT
+	13.value = </ul>
+	
+	# cObject Copyright-Hinweis mit automatischem Jahreswechsel:
+	30 = COA
+	30 {
+		10 = TEXT
+		10.value = &copy;&nbsp; 
+		20 = TEXT
+		20.data = date: Y
+		30 = TEXT
+		30.value = &nbsp;ART+COM
+		wrap = <div id="copy">|</div>
+	}
+	
+}

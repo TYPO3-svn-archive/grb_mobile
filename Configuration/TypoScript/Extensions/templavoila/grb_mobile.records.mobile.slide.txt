@@ -1,0 +1,35 @@
+tmp.records.slide = RECORDS
+tmp.records.slide{
+source.postUserFunc = tx_kbtvcontslide_pi1->main
+source.postUserFunc.table = tt_content
+tables = tt_content
+
+conf.tt_content.stdWrap.if.isFalse.field = tx_grbmobile_hide_on_mobile 
+}
+
+# header
+grb_mobile.records.slide.colPos0 < tmp.records.slide
+grb_mobile.records.slide.colPos0.source.postUserFunc.field = header_content
+
+# col1
+grb_mobile.records.slide.colPos1 < tmp.records.slide
+grb_mobile.records.slide.colPos1.source.postUserFunc.field = col1_content_content
+
+# col3
+grb_mobile.records.slide.colPos2 < tmp.records.slide
+grb_mobile.records.slide.colPos2.source.postUserFunc.field = col3_content_content
+
+# col2
+grb_mobile.records.slide.colPos3 < tmp.records.slide
+grb_mobile.records.slide.colPos3.source.postUserFunc.field = col2_content_content
+
+# footer
+grb_mobile.records.slide.colPos4 < tmp.records.slide
+grb_mobile.records.slide.colPos4.source.postUserFunc.field = footer_content
+
+# teaser
+grb_mobile.records.slide.colPos5 < tmp.records.slide
+grb_mobile.records.slide.colPos5.source.postUserFunc.field = teaser_content
+
+# Demo: Footer
+# <TypoScriptObjPath>grb_mobile.records.slide.colPos4</TypoScriptObjPath>

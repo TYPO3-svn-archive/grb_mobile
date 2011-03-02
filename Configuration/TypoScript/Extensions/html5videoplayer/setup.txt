@@ -1,0 +1,9 @@
+# -----------------------------------------------------------------------------------------
+# Template: html5videoplayer
+# -----------------------------------------------------------------------------------------
+
+plugin.tx_html5videoplayer{
+	view {
+		partialRootPath = {$plugin.tx_grbmobilegallery.view.partialRootPath}
+	}
+}

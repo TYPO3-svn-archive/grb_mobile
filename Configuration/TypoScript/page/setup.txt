@@ -1,0 +1,59 @@
+page >
+
+page = PAGE
+page{
+	headerData.5 = TEXT
+	# headerData.5.field = subtitle // title
+	# headerData.5.wrap = <title>ART+COM &nbsp; - &nbsp; |</title>
+	headerData.5.wrap = <title>ART+COM</title>
+	
+	headerData.10 = TEXT
+	headerData.10.value = <link rel="apple-touch-icon" href="fileadmin/images/iphoneIcon.png" />
+	
+	typeNum = 0
+	10 = USER
+	10.userFunc = tx_templavoila_pi1->main_page
+	10.childTemplate = grb_mobile
+}
+
+page{
+
+	# CSS (jquery-mobile Template)
+	includeCSS.grb_mobile01 = EXT:grb_mobile/Resources/Public/JavaScripts/jquery.mobile/jquery.mobile-1.0a2.css
+	# includeCSS.grb_mobile02 = defined in --> grb_mobile/Configuration/TypoScript/StaticFile/setup.txt
+	includeCSS.grb_mobile04 = EXT:grb_mobile/Resources/Public/CSS/grb_mobile-moreslider.css
+	includeCSS.grb_mobile05 = EXT:grb_mobile/Resources/Public/CSS/grb_mobile.css
+	
+	# -----------------------------------------------------------------------------------------
+	# CSS: grb_mobilegallery
+	# -----------------------------------------------------------------------------------------
+	includeCSS.tx_grbmobilegallery = EXT:grb_mobilegallery/Resources/Public/CSS/grb_mobilegallery.css
+	
+	
+	# JS
+	# includeJS.grb_mobile01 = EXT:grb_mobile/Resources/Public/JavaScripts/jquery/jquery-1.4.4.min.js (not in use --> EXT:t3jquery)
+	# includeJS.grb_mobile02 = defined in --> grb_mobile/Configuration/TypoScript/StaticFile/setup.txt	
+	# includeJS.grb_mobile03 = definde in --> grb_mobile/Configuration/TypoScript/StaticFile/setup.txt
+	includeJS.grb_mobile04 = EXT:grb_mobile/Resources/Public/JavaScripts/grb_mobile-jquery.mobile.custom.js
+	includeJS.grb_mobile05 = EXT:grb_mobile/Resources/Public/JavaScripts/jquery.mobile/jquery.mobile-1.0a2.min.js
+}
+
+page.config {
+	headerComment (
+
+	******************************************************************************************************
+	
+	                                   XXXXX    GreenBanana GmbH
+	                                    XX      www.greenbanana.ch
+	        XX      GreenBanana.ch     XX       8409 Winterthur - Schweiz
+	        XXXX                      XXX
+	         XXXXXX                XXXXXX       - Webdesign
+	          XXXXXXXXXXXXXXXXXXXXXXXXXX        - Webhosting
+	            XXXXXXXXXXXXXXXXXXXXXXX         - Projektmanagement
+	                XXXXXXXXXXXXXXXX            - Mobile-Websites
+	
+	
+******************************************************************************************************
+
+	)
+}

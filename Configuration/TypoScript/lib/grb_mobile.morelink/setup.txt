@@ -1,0 +1,10 @@
+lib.grb_mobile.morelink = TEXT
+lib.grb_mobile.morelink.value = mehr Text
+
+lib.grb_mobile_lesslink = TEXT
+lib.grb_mobile_lesslink.value = weniger Text
+
+[globalVar = GP:L = 1]
+lib.grb_mobile.morelink.value = More text
+lib.grb_mobile_lesslink.value = Less text
+[END]

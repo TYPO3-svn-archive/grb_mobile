@@ -1,0 +1,6 @@
+lib.grb_mobile.logo = TEXT
+lib.grb_mobile.logo.value(
+	<a href="/" title="Home" class="ui-link">
+		<img src="fileadmin/images/ac_logo_140px.gif" alt="ART+COM">
+	</a>
+)

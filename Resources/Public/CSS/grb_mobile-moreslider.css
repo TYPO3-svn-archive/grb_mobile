@@ -1,0 +1,25 @@
+.grb_mobile-moretext,
+.grb_mobile-lesslink {
+	display: none;
+}
+
+.grb_mobile-morelink,
+.grb_mobile-lesslink {
+	font-size: 16px;
+	margin-bottom:20px;
+	color: #36B7E5;
+	padding-right: 20px;
+	width: auto;
+	float: left;
+	white-space: nowrap;
+	background: url(../../../../../../fileadmin/images/moreslider.gif) no-repeat 100% 0px #ffffff;
+}
+
+.grb_mobile-morelink:hover,
+.grb_mobile-lesslink:hover,
+.grb_mobile-morelink:active,
+.grb_mobile-lesslink:active {
+	color: #1f6680;
+	cursor: pointer;
+	background: url(../../../../../../fileadmin/images/moreslider-activ.gif) no-repeat 100% 0px #ffffff;
+}
